@@ -11,11 +11,11 @@ const App = () => {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
-    <div className="absolute min-h-screen overflow-hidden font-sans bg-white">
+    <div className="min-h-screen overflow-hidden font-sans bg-white">
       <Header className=""/>
       <TabBar />
       <div className="relative flex">
-        <div className="flex-grow px-16 overflow-auto">
+        <div className="px-16 overflow-auto">
           <JobDetails />
         </div>
         <Sidebar isOpen={isSidebarOpen} onToggle={toggleSidebar} />

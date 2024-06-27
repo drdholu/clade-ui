@@ -3,15 +3,15 @@ import { MapPin, Briefcase } from "lucide-react";
 const JobHeader = ({ title, location, salary, status }) => (
   <div className="mb-6">
     <div className="flex items-center gap-3">
-      <div className="mb-2 text-2xl font-bold">{title}</div>
+      <div className="mb-2 text-3xl font-extrabold text-gray-700">{title}</div>
       <div className="flex items-center gap-3">
-        <span className="flex items-center text-sm text-gray-500">
-          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></div>
+        <span className="flex items-center text-xs text-gray-500">
+          <div className="w-1 h-1 mr-2 bg-gray-400 rounded-full"></div>
           posted 2 days ago
         </span>
 
         <span
-          className={`flex items-center text-sm px-2 py-1 border rounded-full ${
+          className={`flex items-center text-xs px-2 py-1 border rounded-full ${
             status === "Open"
               ? "text-green-600 bg-green-100 border-green-500"
               : "text-gray-600 bg-gray-100"
@@ -26,11 +26,11 @@ const JobHeader = ({ title, location, salary, status }) => (
         </span>
       </div>
     </div>
-    <div className="flex items-center space-x-4 text-sm text-gray-600">
+    <div className="flex items-center space-x-4 text-base text-gray-600">
       <span className="flex items-center gap-2">
         <MapPin size={16} /> {location}
       </span>
-      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></div>
+      <div className="w-1 h-1 mr-2 bg-gray-400 rounded-full"></div>
       <span className="flex items-center gap-3">
         <svg
           width="24"

@@ -23,7 +23,7 @@ const Sidebar = ({ isOpen, onToggle }) => {
             isOpen ? "translate-x-0" : "translate-x-full"
           } md:relative md:translate-x-0 transition-transform duration-300 ease-in-out z-30 bg-white`}
         >
-          <div className="flex flex-col h-full p-6 border-l w-80">
+          <div className="flex-col h-full p-6 border-l w-80">
 
             <div className="flex items-center gap-2 mb-6">
             <button className="flex items-center justify-center w-full px-2 py-2 space-x-2 text-red-500 transition-colors border border-red-500 rounded hover:bg-red-50">
@@ -50,10 +50,11 @@ const Sidebar = ({ isOpen, onToggle }) => {
             </div>
           </div>
         </div>
+
         <button
           onClick={onToggle}
           className={`fixed top-1/2 right-0 transform -translate-y-1/2 ${
-            isOpen ? "translate-x-0" : "-translate-x-6"
+            isOpen ? "translate-x-0" : "-translate-x-0"
           } md:hidden bg-white border border-gray-200 rounded-l-full p-2 z-40 transition-transform duration-300 ease-in-out`}
         >
           {isOpen ? <ChevronRight size={24} /> : <ChevronLeft size={24} />}
